@@ -15,13 +15,13 @@ function savePostedData($post)
 {
     $path = getRefererPath();
     switch ($path) {
-        case '/new.php':
+        case '/test_app/new.php':
             createTodoData($post['content']);
             break;
-        case '/edit.php':
+        case '/test_app/edit.php':
             updateTodoData($post);
             break;
-        case '/index.php': // 追記
+        case '/test_app/index.php': // 追記
             deleteTodoData($post['id']); // 追記
             break; // 追記
         default:
